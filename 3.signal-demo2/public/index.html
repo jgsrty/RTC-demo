@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Room</title>
+  <!-- 
+    文档地址
+    https://ahoj.cc/2019/12/webrtc%E4%B9%8B%E5%AE%9E%E7%8E%B01v1%E9%9F%B3%E8%A7%86%E9%A2%91%E9%80%9A%E8%AF%9D/
+  -->
+</head>
+<body>
+<div>
+  <div id="preview">
+    <table align="center">
+      <tr>
+        <td>
+          <h2>Local:</h2>
+          <video id="localvideo" autoplay playsinline muted></video>
+
+          <label>Offer SDP:
+            <textarea id="textarea_offer"></textarea>
+          </label>
+        </td>
+        <td>
+          <button id="connserver">连接</button><br>
+          <button id="leave" disabled>离开</button>
+        </td>
+        <td>
+          <h2>Remote:</h2>
+          <video id="remotevideo" autoplay playsinline></video>
+
+          <label>Answer SDP:
+            <textarea id="textarea_answer"></textarea>
+          </label>
+        </td>
+      </tr>
+    </table>
+  </div>
+</div>
+
+<script src="https://cdn.bootcss.com/socket.io/2.3.0/socket.io.js"></script>
+<script src="https://cdn.bootcss.com/webrtc-adapter/zv4.1.1/adapter.min.js"></script>
+<script src="client.js"></script>
+</body>
+</html>
